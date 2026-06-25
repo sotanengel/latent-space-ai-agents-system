@@ -1,11 +1,29 @@
-"""Phase 4 coordination layer (stub).
+"""Phase 4 coordination layer.
 
-Tracking issue: https://github.com/sotanengel/latent-space-ai-agents-system/issues/5
-Covers FR-WM-001..009 and FR-PV-001..009.
+Implemented: WorkingMemory + WorkingMemoryAuditor (FR-WM-001..007),
+ProvenanceTracker + HmacSigner (FR-PV-001..007), LatentFlowTracer
+(FR-PV-005).
 """
 
-from .latent_flow_tracer import LatentFlowTracer
-from .provenance_tracker import ProvenanceTracker
-from .working_memory_auditor import WorkingMemoryAuditor
+from .latent_flow_tracer import LatentFlowTracer, SpanEvent
+from .provenance_tracker import HmacSigner, ProvenanceTracker, Signer
+from .working_memory import (
+    AuditReport,
+    MemoryEntry,
+    MemoryHandle,
+    WorkingMemory,
+    WorkingMemoryAuditor,
+)
 
-__all__ = ["LatentFlowTracer", "ProvenanceTracker", "WorkingMemoryAuditor"]
+__all__ = [
+    "AuditReport",
+    "HmacSigner",
+    "LatentFlowTracer",
+    "MemoryEntry",
+    "MemoryHandle",
+    "ProvenanceTracker",
+    "Signer",
+    "SpanEvent",
+    "WorkingMemory",
+    "WorkingMemoryAuditor",
+]
