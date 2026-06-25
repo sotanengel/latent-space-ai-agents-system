@@ -1,11 +1,16 @@
-"""Phase 3 semantic verification (stub).
+"""Semantic layer.
 
-Tracking issue: https://github.com/sotanengel/latent-space-ai-agents-system/issues/4
-Covers FR-SM-001..012 and FR-TA-001..003.
+Phase 2: CrossModelAligner (implemented), Phase 3: probing / decode-back (stub).
 """
 
-from .cross_model_aligner import CrossModelAligner
+from .cross_model_aligner import CKAVerifier, CrossModelAligner, LinearProjectionAligner
 from .decode_back_verifier import DecodeBackVerifier
 from .probing_classifier import ProbingClassifier
 
-__all__ = ["CrossModelAligner", "DecodeBackVerifier", "ProbingClassifier"]
+__all__ = [
+    "CKAVerifier",
+    "CrossModelAligner",
+    "DecodeBackVerifier",
+    "LinearProjectionAligner",
+    "ProbingClassifier",
+]
