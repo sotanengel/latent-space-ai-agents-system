@@ -1,0 +1,10 @@
+# Takumi Guard (Shisho) sample pip configuration.
+# See https://shisho.dev/docs/ja/t/guard/quickstart/index.md
+#
+# 本ファイルを `~/.pip/pip.conf`（POSIX）または `%APPDATA%\pip\pip.ini`（Windows）にコピーし、
+# `${TAKUMI_GUARD_TOKEN}` を実トークンに置換するか、環境変数経由で展開すること。
+#
+# 実トークンは絶対にコミットしない。
+
+[global]
+index-url = https://${TAKUMI_GUARD_TOKEN}@pypi.flatt.tech/simple/

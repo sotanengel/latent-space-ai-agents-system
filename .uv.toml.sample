@@ -1,0 +1,16 @@
+# Takumi Guard (Shisho) sample uv configuration.
+# See https://shisho.dev/docs/ja/t/guard/quickstart/index.md
+#
+# 手順:
+#   1. メール認証で `tg_anon_` プレフィックスのトークンを取得
+#   2. 環境変数 TAKUMI_GUARD_TOKEN にトークンを設定
+#   3. 本ファイルを `.uv.toml` にコピー（.gitignore 対象）
+#   4. `uv sync` で動作確認、`uv pip install panda-guard-test-malicious` が
+#      403 Forbidden を返すことを確認
+#
+# 実トークンは絶対にコミットしないこと。
+
+[[index]]
+name = "takumi-guard"
+url = "https://${TAKUMI_GUARD_TOKEN}@pypi.flatt.tech/simple/"
+default = true
