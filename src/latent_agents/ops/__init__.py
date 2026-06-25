@@ -1,10 +1,17 @@
-"""Phase 7 online operations (stub).
+"""Phase 7 online operations."""
 
-Tracking issue: https://github.com/sotanengel/latent-space-ai-agents-system/issues/8
-Covers FR-OM-001..009 and NFR-OB-001..004.
-"""
-
-from .alert_manager import AlertManager
+from .alert_manager import Alert, AlertManager, Severity
+from .drift_detector import DriftDetector
 from .online_monitor import OnlineMonitor
+from .prometheus_exporter import PrometheusExporter
+from .slo import SLOWindow
 
-__all__ = ["AlertManager", "OnlineMonitor"]
+__all__ = [
+    "Alert",
+    "AlertManager",
+    "DriftDetector",
+    "OnlineMonitor",
+    "PrometheusExporter",
+    "SLOWindow",
+    "Severity",
+]
