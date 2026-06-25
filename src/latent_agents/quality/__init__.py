@@ -1,12 +1,23 @@
-"""Phase 5/6 quality assurance (stub).
+"""Phase 3/5/6 quality assurance.
 
-Tracking issues:
-- Phase 5 (performance / automation): #6
-- Phase 6 (security / robustness): #7
+Implemented: LLMJudgeOrchestrator (FR-TA-001..003).
+Stubs: AdversarialTester (Phase 6), PerformanceProfiler (Phase 5).
 """
 
 from .adversarial_tester import AdversarialTester
-from .llm_judge_orchestrator import LLMJudgeOrchestrator
+from .llm_judge_orchestrator import (
+    EnsembleResult,
+    Judge,
+    JudgeVerdict,
+    LLMJudgeOrchestrator,
+)
 from .performance_profiler import PerformanceProfiler
 
-__all__ = ["AdversarialTester", "LLMJudgeOrchestrator", "PerformanceProfiler"]
+__all__ = [
+    "AdversarialTester",
+    "EnsembleResult",
+    "Judge",
+    "JudgeVerdict",
+    "LLMJudgeOrchestrator",
+    "PerformanceProfiler",
+]
